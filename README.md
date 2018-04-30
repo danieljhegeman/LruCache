@@ -20,7 +20,7 @@ myCache.set('third', 3)
 
 myCache.get('first') # 1
 
-myCache.set('fourth', 4) # Pushes first entry ('first', 1) out of the cache
+myCache.set('fourth', 4) # Pushes first entry out of the cache
 
 myCache.get('first') # None
 ```
