@@ -9,7 +9,7 @@ class LruCache():
     self.list = DoublyLinkedList()
 
   def set(self, key, val):
-    if not self.store.has_key(key):
+    if key not in self.store:
       self.store[key] = Node(key, val)
       self.itemCount += 1
     elif self.store.get(key) != val:
@@ -20,7 +20,14 @@ class LruCache():
       del self.store[tail.key]
 
   def get(self, key):
-    if self.store.has_key(key):
+    if key in self.store:
       node = self.store.get(key)
       self.list.moveToHead(node)
+      return node.val
+
+  def remove(self, key):
+    if key in self.store:
+      node = self.store.get(key)
+      self.list.remove(node)
+      del self.store[node.key]
       return node.val
