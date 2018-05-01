@@ -4,7 +4,7 @@ In-memory cache that deletes Least-Recently-Used items when limit is reached.
 
 ## Prerequisites
 
-python >= 2.7
+Python >= 3.0
 
 ## Usage and Behavior
 
