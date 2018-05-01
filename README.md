@@ -36,6 +36,8 @@ myCache.set('fourth', 4) # None
 # None<-{'fourth'=>4}-><-{'second'=>2}-><-{'third'=>3}->None
 
 myCache.get('first') # None
+# None<-{'fourth'=>4}-><-{'second'=>2}-><-{'third'=>3}->None
+
 myCache.get('third') # 3
 # None<-{'third'=>3}-><-{'fourth'=>4}-><-{'second'=>2}->None
 ```
